@@ -8,11 +8,21 @@ export default function Exercise() {
   const router = useRouter();
 
   const exercises = [
-    { title: "Exercise 3", description: ["Create login screen", "Fields: Email, Password"], screen: "/login" },
-    { title: "Exercise 4", description: ["Create a stopwatch using useState and useEffect"], screen: "/hooks" },
-    { title: "Exercise 5", description: ["Create register screen", "Fields: Image, Name, Email, Password"], screen: "/register" },
-    { title: "Exercise 6", description: ["Create a simple CRUD using useContext and useReducer"], screen: "/exercise6"},
-    { title: "Exercise 7", description: ["Create a simple quiz using the API from Open Trivia Database"], screen: "/exercise7"},
+    { title: "Exercise 3", description: ["Create login screen", "Fields: Email, Password"], screen: "/login" as const },
+    { title: "Exercise 4", description: ["Create a stopwatch using useState and useEffect"], screen: "/hooks" as const },
+    { title: "Exercise 5", description: ["Create register screen", "Fields: Image, Name, Email, Password"], screen: "/register" as const },
+    { title: "Exercise 6", description: ["Create a simple CRUD using useContext and useReducer"], screen: "/exercise6" as const},
+    { title: "Exercise 7", description: ["Create a simple quiz using the API from Open Trivia Database"], screen: "/exercise7/quizScreen" as const},
+    { title: "Exercise 8", description: [
+      "Continuation",
+      "Using React Hook Form, add appropriate validations for the registration and login page"
+    ], screen: "/exercise8/index" as const},
+    { title: "Exercise 9", description: [
+      "Continuation",
+      "Connect your React Native app to Firebase",
+      "Integrate Firebase Authentication for registration and login pages",
+      "Use Firebase Storage for profile image upload during registration"
+    ], screen: "/exercise9/index" as const}
   ];
 
   return (
